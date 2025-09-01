@@ -18,6 +18,12 @@ public class BuscarClientesCiudad extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Buscar Clientes Por Ciudad");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -37,6 +43,11 @@ public class BuscarClientesCiudad extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 
 
-
+/*
+             /\_/\           ___
+            = o_o =_______    \ \
+             __^      __(  \.__) )
+         (@)<_____>__(_____)____/
+ */
 
 }

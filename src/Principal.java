@@ -1,4 +1,9 @@
 
+import Views.Clientes.AgregarClientes;
+import Views.Clientes.BorrarClientes;
+import Views.Clientes.BuscarClientes;
+import Views.Directorio.BuscarClientesApellido;
+import Views.Directorio.BuscarClientesCiudad;
 import javax.swing.JOptionPane;
 
 
@@ -133,12 +138,12 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA AGREGAR CLIENTES 
     private void jAgregarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarClientesActionPerformed
         
-        //BorrarAlumno borrar = new BorrarAlumno();
-        //jDesktopPane1.add(borrar);
-        //int x = (jDesktopPane1.getWidth() - borrar.getWidth()) / 2;
-        //int y = (jDesktopPane1.getHeight() - borrar.getHeight()) / 2;
-        //borrar.setLocation(x, y);
-        //borrar.setVisible(true);
+        AgregarClientes agregarClientes = new AgregarClientes();
+        jDesktopPane1.add(agregarClientes);
+        int x = (jDesktopPane1.getWidth() - agregarClientes.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - agregarClientes.getHeight()) / 2;
+        agregarClientes.setLocation(x, y);
+        agregarClientes.setVisible(true);
         
     }//GEN-LAST:event_jAgregarClientesActionPerformed
     // VENTANA AGREGAR CLIENTES 
@@ -147,7 +152,12 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BUSCAR CLIENTES 
     private void jBuscarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesActionPerformed
         
-        
+        BorrarClientes borrarClientes = new BorrarClientes();
+        jDesktopPane1.add(borrarClientes);
+        int x = (jDesktopPane1.getWidth() - borrarClientes.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - borrarClientes.getHeight()) / 2;
+        borrarClientes.setLocation(x, y);
+        borrarClientes.setVisible(true);
         
     }//GEN-LAST:event_jBuscarClientesActionPerformed
     // VENTANA BUSCAR CLIENTES 
@@ -155,7 +165,12 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BORRAR CLIENTES 
     private void jBorrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBorrarClientesActionPerformed
         
-        
+        BuscarClientes buscaClientes = new BuscarClientes();
+        jDesktopPane1.add(buscaClientes);
+        int x = (jDesktopPane1.getWidth() - buscaClientes.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - buscaClientes.getHeight()) / 2;
+        buscaClientes.setLocation(x, y);
+        buscaClientes.setVisible(true);
         
     }//GEN-LAST:event_jBorrarClientesActionPerformed
     // VENTANA BORRAR CLIENTES 
@@ -163,13 +178,27 @@ public class Principal extends javax.swing.JFrame {
     
     // VENTANA BUSCAR CLIENTES CIUDAD
     private void jBuscarClientesCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesCiudadActionPerformed
-
+        
+        BuscarClientesApellido buscaAClientes = new BuscarClientesApellido();
+        jDesktopPane1.add(buscaAClientes);
+        int x = (jDesktopPane1.getWidth() - buscaAClientes.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - buscaAClientes.getHeight()) / 2;
+        buscaAClientes.setLocation(x, y);
+        buscaAClientes.setVisible(true);
+        
     }//GEN-LAST:event_jBuscarClientesCiudadActionPerformed
     // VENTANA BUSCAR CLIENTES CIUDAD
     
     
     // VENTANA BUSCAR CLIENTES APELLIDO
     private void jBuscarClientesApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesApellidoActionPerformed
+        
+        BuscarClientesCiudad buscaCClientes = new BuscarClientesCiudad();
+        jDesktopPane1.add(buscaCClientes);
+        int x = (jDesktopPane1.getWidth() - buscaCClientes.getWidth()) / 2;
+        int y = (jDesktopPane1.getHeight() - buscaCClientes.getHeight()) / 2;
+        buscaCClientes.setLocation(x, y);
+        buscaCClientes.setVisible(true);
         
     }//GEN-LAST:event_jBuscarClientesApellidoActionPerformed
     // VENTANA BUSCAR CLIENTES APELLIDO
@@ -220,7 +249,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jSalir;
     // End of variables declaration//GEN-END:variables
 
-
+/*
+             /\_/\           ___
+            = o_o =_______    \ \
+             __^      __(  \.__) )
+         (@)<_____>__(_____)____/
+ */
 
 
 }
