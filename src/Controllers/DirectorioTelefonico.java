@@ -11,7 +11,7 @@ public class DirectorioTelefonico {
 
     // PRINCIPAL FUNCTIONS
     public void agregarContacto(Contacto contacto) {
-        directorio.put((long) contacto.getTelefono(), contacto);
+        directorio.put(( long ) contacto.getTelefono(), contacto);
     }
 
     public Contacto buscarContacto(Long telefono) {
