@@ -1,22 +1,34 @@
+package Main;
 
+import Controllers.Ciudad;
 import Controllers.Contacto;
+import Controllers.DirectorioCiudades;
 import Controllers.DirectorioTelefonico;
 import Views.Clientes.AgregarClientes;
 import Views.Clientes.BorrarClientes;
 import Views.Clientes.BuscarClientes;
 import Views.Directorio.BuscarClientesApellido;
 import Views.Directorio.BuscarClientesCiudad;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Principal extends javax.swing.JFrame {
 
+    // public static DirectorioCiudades ciudades = new DirectorioCiudades();
+    public static ArrayList<Ciudad> ciudades = new DirectorioCiudades().getCiudades();
+    public static DirectorioTelefonico contactos = new DirectorioTelefonico();
+
     public Principal() {
         initComponents();
+        // ciudades.add(new Ciudad("San Luis"));
+        // ciudades.agregarCiudad(new Ciudad("San Luis"));
+        // ciudades.agregarCiudad(new Ciudad("Córdoba"));
+        // ciudades.agregarCiudad(new Ciudad("Buenos Aires"));
 
     }
 
-    @SuppressWarnings( "unchecked" )
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
@@ -36,13 +48,11 @@ public class Principal extends javax.swing.JFrame {
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
+                jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 700, Short.MAX_VALUE));
         jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
-        );
+                jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 627, Short.MAX_VALUE));
 
         jMenuClientes.setText("Clientes");
 
@@ -108,31 +118,30 @@ public class Principal extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jDesktopPane1));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jDesktopPane1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // BOTON SALIR
-    private void jSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSalirMouseClicked
+    private void jSalirMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jSalirMouseClicked
 
-        int respuesta = JOptionPane.showConfirmDialog(this, "Esta seguro ?", "Confirmar Salir", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if( respuesta == JOptionPane.YES_OPTION ) {
+        int respuesta = JOptionPane.showConfirmDialog(this, "Esta seguro ?", "Confirmar Salir",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (respuesta == JOptionPane.YES_OPTION) {
             dispose();
             System.exit(0);
         }
 
-    }//GEN-LAST:event_jSalirMouseClicked
-    // BOTON SALIR
+    }// GEN-LAST:event_jSalirMouseClicked
+     // BOTON SALIR
 
     // VENTANA AGREGAR CLIENTES
-    private void jAgregarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarClientesActionPerformed
+    private void jAgregarClientesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jAgregarClientesActionPerformed
 
         AgregarClientes agregarClientes = new AgregarClientes();
         jDesktopPane1.add(agregarClientes);
@@ -141,11 +150,11 @@ public class Principal extends javax.swing.JFrame {
         agregarClientes.setLocation(x, y);
         agregarClientes.setVisible(true);
 
-    }//GEN-LAST:event_jAgregarClientesActionPerformed
-    // VENTANA AGREGAR CLIENTES
+    }// GEN-LAST:event_jAgregarClientesActionPerformed
+     // VENTANA AGREGAR CLIENTES
 
     // VENTANA BUSCAR CLIENTES
-    private void jBuscarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesActionPerformed
+    private void jBuscarClientesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jBuscarClientesActionPerformed
 
         BorrarClientes borrarClientes = new BorrarClientes();
         jDesktopPane1.add(borrarClientes);
@@ -154,11 +163,11 @@ public class Principal extends javax.swing.JFrame {
         borrarClientes.setLocation(x, y);
         borrarClientes.setVisible(true);
 
-    }//GEN-LAST:event_jBuscarClientesActionPerformed
-    // VENTANA BUSCAR CLIENTES
+    }// GEN-LAST:event_jBuscarClientesActionPerformed
+     // VENTANA BUSCAR CLIENTES
 
     // VENTANA BORRAR CLIENTES
-    private void jBorrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBorrarClientesActionPerformed
+    private void jBorrarClientesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jBorrarClientesActionPerformed
 
         BuscarClientes buscaClientes = new BuscarClientes();
         jDesktopPane1.add(buscaClientes);
@@ -167,11 +176,11 @@ public class Principal extends javax.swing.JFrame {
         buscaClientes.setLocation(x, y);
         buscaClientes.setVisible(true);
 
-    }//GEN-LAST:event_jBorrarClientesActionPerformed
-    // VENTANA BORRAR CLIENTES
+    }// GEN-LAST:event_jBorrarClientesActionPerformed
+     // VENTANA BORRAR CLIENTES
 
     // VENTANA BUSCAR CLIENTES CIUDAD
-    private void jBuscarClientesCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesCiudadActionPerformed
+    private void jBuscarClientesCiudadActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jBuscarClientesCiudadActionPerformed
 
         BuscarClientesApellido buscaAClientes = new BuscarClientesApellido();
         jDesktopPane1.add(buscaAClientes);
@@ -180,11 +189,11 @@ public class Principal extends javax.swing.JFrame {
         buscaAClientes.setLocation(x, y);
         buscaAClientes.setVisible(true);
 
-    }//GEN-LAST:event_jBuscarClientesCiudadActionPerformed
-    // VENTANA BUSCAR CLIENTES CIUDAD
+    }// GEN-LAST:event_jBuscarClientesCiudadActionPerformed
+     // VENTANA BUSCAR CLIENTES CIUDAD
 
     // VENTANA BUSCAR CLIENTES APELLIDO
-    private void jBuscarClientesApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesApellidoActionPerformed
+    private void jBuscarClientesApellidoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jBuscarClientesApellidoActionPerformed
 
         BuscarClientesCiudad buscaCClientes = new BuscarClientesCiudad();
         jDesktopPane1.add(buscaCClientes);
@@ -193,38 +202,44 @@ public class Principal extends javax.swing.JFrame {
         buscaCClientes.setLocation(x, y);
         buscaCClientes.setVisible(true);
 
-    }//GEN-LAST:event_jBuscarClientesApellidoActionPerformed
-    // VENTANA BUSCAR CLIENTES APELLIDO
+    }// GEN-LAST:event_jBuscarClientesApellidoActionPerformed
+     // VENTANA BUSCAR CLIENTES APELLIDO
 
     public static void main(String args[]) {
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels() ) {
-                if( "Nimbus".equals(info.getName()) ) {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch( ClassNotFoundException ex ) {
+        } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch( InstantiationException ex ) {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch( IllegalAccessException ex ) {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch( javax.swing.UnsupportedLookAndFeelException ex ) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        // </editor-fold>
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
-                DirectorioTelefonico directorio = new DirectorioTelefonico();
-                Contacto contacto1 = new Contacto(46617010L, "Esteban", "Redon", "San Luis", "Barrio jardin San Luis", 2664552752L);
-                directorio.agregarContacto(contacto1);
-                directorio.buscarContacto(2664552752L);
+                // Agregar contacto de prueba
+                // DirectorioTelefonico directorio = new DirectorioTelefonico();
+                Contacto contacto2 = new Contacto(46617010, "Esteban", "Redon", "San Luis", "Barrio jardin San Luis",
+                        2664552752L);
+                contactos.agregarContacto(contacto2);
+
             }
         });
     }
@@ -244,9 +259,9 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     /*
-             /\_/\           ___
-            = o_o =_______    \ \
-             __^      __(  \.__) )
-         (@)<_____>__(_____)____/
+     * /\_/\ ___
+     * = o_o =_______ \ \
+     * __^ __( \.__) )
+     * (@)<_____>__(_____)____/
      */
 }

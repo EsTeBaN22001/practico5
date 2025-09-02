@@ -2,27 +2,27 @@ package Controllers;
 
 public class Contacto {
 
-    private Long DNI;
+    private int DNI;
     private String nombre;
     private String apellido;
-    private String Ciudad;
+    private String ciudad;
     private String direccion;
     private Long telefono;
 
-    public Contacto(Long DNI, String nombre, String apellido, String Ciudad, String direccion, Long telefono) {
+    public Contacto(int DNI, String nombre, String apellido, String Ciudad, String direccion, Long telefono) {
         this.DNI = DNI;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.Ciudad = Ciudad;
+        this.ciudad = Ciudad;
         this.direccion = direccion;
         this.telefono = telefono;
     }
 
-    public Long getDNI() {
+    public int getDNI() {
         return DNI;
     }
 
-    public void setDNI(Long DNI) {
+    public void setDNI(int DNI) {
         this.DNI = DNI;
     }
 
@@ -43,11 +43,11 @@ public class Contacto {
     }
 
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 
     public void setCiudad(String Ciudad) {
-        this.Ciudad = Ciudad;
+        this.ciudad = Ciudad;
     }
 
     public String getDireccion() {
