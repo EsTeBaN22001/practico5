@@ -1,23 +1,28 @@
-
 package Views.Clientes;
 
+import Controllers.Ciudad;
+import Controllers.Contacto;
+import Main.Principal;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-
-
 
 public class AgregarClientes extends javax.swing.JInternalFrame {
-    
-   
-    
+
     public AgregarClientes() {
         initComponents();
         this.setSize(500, 500);
-        
-        
-        
+        cargarCombo();
     }
-    @SuppressWarnings("unchecked")
+
+    private void cargarCombo() {
+        jComboCiudad.removeAllItems();
+        jComboCiudad.addItem(null);
+        for( Ciudad c : Principal.ciudades ) {
+            jComboCiudad.addItem(c.getCiudad());
+        }
+
+    }
+
+    @SuppressWarnings( "unchecked" )
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -238,116 +243,106 @@ public class AgregarClientes extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     // TEXTO DNI //
     private void jTextDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNIActionPerformed
-        
+
     }//GEN-LAST:event_jTextDNIActionPerformed
     // TEXTO DNI //
-    
+
     // TEXTO NOMBRE //
     private void jTextNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreActionPerformed
-        
-        
-        
+
     }//GEN-LAST:event_jTextNombreActionPerformed
     // TEXTO NOMBRE //
-    
-    
+
     // TEXTO APELLIDO //
     private void jTextApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextApellidoActionPerformed
-        
+
     }//GEN-LAST:event_jTextApellidoActionPerformed
     // TEXTO APELLIDO //
-    
-    
-    
+
     // TEXTO CIUDAD //
     private void jComboCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboCiudadActionPerformed
-        
-        Ciudad seleccionado = (Ciudad) jComboCiudad.getSelectedItem();
-        
-        if (seleccionado == null) {
-            return;
-        }
-        
+
     }//GEN-LAST:event_jComboCiudadActionPerformed
     // TEXTO CIUDAD //
-    
-    
+
     // TEXTO DOMICILIO //
     private void jTextDomicilioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDomicilioActionPerformed
-        
+
     }//GEN-LAST:event_jTextDomicilioActionPerformed
     // TEXTO DOMICILIO //
-    
-    
+
     // TEXTO TELEFONO //
     private void jTextTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTelefonoActionPerformed
-        
+
     }//GEN-LAST:event_jTextTelefonoActionPerformed
     // TEXTO TELEFONO //
-    
-    
+
     // BOTON GUARDAR //
     private void jBotonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotonGuardarActionPerformed
-        
-        String dni = jTextDNI.getText();
-        String nombre = jTextNombre.getText();
-        String apellido = jTextApellido.getText();
-        String ciudad = jComboCiudad.getSelectedItem().toString();
-        String domicilio = jTextDomicilio.getText();
-        String telefono = jTextTelefono.getText();
-        
-        
-        
+
+        String dni=jTextDNI.getText();
+        String nombre=jTextNombre.getText();
+        String apellido=jTextApellido.getText();
+        String ciudad=jComboCiudad.getSelectedItem().toString();
+        String direccion=jTextDomicilio.getText();
+        String telefono=jTextTelefono.getText();
+
         // NO DEJAR QUE DEJA ALGO VACIO
-        if(dni.isEmpty()){
+        if( dni.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "El DNI no puede estar vacio..");
             return;
         }
-         if(nombre.isEmpty()){
+        if( nombre.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "Nombre no puede estar vacio..");
             return;
         }
-         if(apellido.isEmpty()){
+        if( apellido.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "Apellido no puede estar vacio..");
             return;
         }
-         if(ciudad.isEmpty()){
+        if( ciudad.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "La ciudad no puede estar vacia..");
             return;
         }
-         if(domicilio.isEmpty()){
+        if( direccion.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "domicilio no puede estar vacio..");
             return;
         }
-         if(telefono.isEmpty()){
+        if( telefono.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "Telefono no puede estar vacio..");
             return;
         }
-        
-        // CONVERTIR DNI Y TELEFONO A INT  Y MAS VERIFICACIONES//
+
+        // CONVERTIR DNI Y TELEFONO A INT Y MAS VERIFICACIONES//
         int dniINT;
-        int telefonoINT;
-            try {
-                dniINT = Integer.parseInt(dni);
-                telefonoINT = Integer.parseInt(telefono);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Numero no valido. :/, en DNI o Telefono");
-                return;
-         }
-         if(dniINT <= 0 && telefonoINT <= 0){
-             JOptionPane.showMessageDialog(null, "El numero no puede ser negativo. :%");
-         }
-        
+        Long telefonoLong;
+        try {
+            dniINT=Integer.parseInt(dni);
+            telefonoLong=Long.parseLong(telefono);
+        } catch( NumberFormatException e ) {
+            JOptionPane.showMessageDialog(null, "Numero no valido. :/, en DNI o Telefono");
+            return;
+        }
+        if( dniINT<=0&&telefonoLong<=0 ) {
+            JOptionPane.showMessageDialog(null, "El numero no puede ser negativo. :%");
+        }
+
+        Principal.contactos.agregarContacto(new Contacto(dniINT, nombre, apellido, ciudad, direccion, telefonoLong));
+
+        for( Contacto contacto : Principal.contactos.getDirectorio().values() ) {
+            System.out.println("Nombre: "+contacto.getNombre()
+              +" | Teléfono: "+contacto.getCiudad());
+        }
+
     }//GEN-LAST:event_jBotonGuardarActionPerformed
     // BOTON GUARDAR //
-    
-    
+
     // BOTON SALIR //
     private void jBotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotonSalirActionPerformed
-        
+        this.setVisible(false);
     }//GEN-LAST:event_jBotonSalirActionPerformed
     // BOTON SALIR //
 
@@ -371,12 +366,10 @@ public class AgregarClientes extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextTelefono;
     // End of variables declaration//GEN-END:variables
 
-/*
+    /*
              /\_/\           ___
             = o_o =_______    \ \
              __^      __(  \.__) )
          (@)<_____>__(_____)____/
- */
-
-
+     */
 }

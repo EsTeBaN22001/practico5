@@ -2,28 +2,28 @@ package Controllers;
 
 public class Contacto {
 
-    private Long DNI;
+    private int DNI;
     private String nombre;
     private String apellido;
-    private String Ciudad;
+    private String ciudad;
     private String direccion;
     private Long telefono;
 
-    public Contacto(Long DNI, String nombre, String apellido, String Ciudad, String direccion, Long telefono) {
-        this.DNI = DNI;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.Ciudad = Ciudad;
-        this.direccion = direccion;
-        this.telefono = telefono;
+    public Contacto(int DNI, String nombre, String apellido, String Ciudad, String direccion, Long telefono) {
+        this.DNI=DNI;
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.ciudad=Ciudad;
+        this.direccion=direccion;
+        this.telefono=telefono;
     }
 
-    public Long getDNI() {
+    public int getDNI() {
         return DNI;
     }
 
-    public void setDNI(Long DNI) {
-        this.DNI = DNI;
+    public void setDNI(int DNI) {
+        this.DNI=DNI;
     }
 
     public String getNombre() {
@@ -31,7 +31,7 @@ public class Contacto {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombre=nombre;
     }
 
     public String getApellido() {
@@ -39,15 +39,15 @@ public class Contacto {
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.apellido=apellido;
     }
 
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 
     public void setCiudad(String Ciudad) {
-        this.Ciudad = Ciudad;
+        this.ciudad=Ciudad;
     }
 
     public String getDireccion() {
@@ -55,7 +55,7 @@ public class Contacto {
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+        this.direccion=direccion;
     }
 
     public Long getTelefono() {
@@ -63,6 +63,6 @@ public class Contacto {
     }
 
     public void setTelefono(Long telefono) {
-        this.telefono = telefono;
+        this.telefono=telefono;
     }
 }

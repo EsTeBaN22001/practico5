@@ -1,14 +1,21 @@
+package Main;
 
+import Controllers.Ciudad;
 import Controllers.Contacto;
+import Controllers.DirectorioCiudades;
 import Controllers.DirectorioTelefonico;
 import Views.Clientes.AgregarClientes;
 import Views.Clientes.BorrarClientes;
 import Views.Clientes.BuscarClientes;
 import Views.Directorio.BuscarClientesApellido;
 import Views.Directorio.BuscarClientesCiudad;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Principal extends javax.swing.JFrame {
+
+    public static ArrayList<Ciudad> ciudades=new DirectorioCiudades().getCiudades();
+    public static DirectorioTelefonico contactos=new DirectorioTelefonico();
 
     public Principal() {
         initComponents();
@@ -122,8 +129,8 @@ public class Principal extends javax.swing.JFrame {
     // BOTON SALIR
     private void jSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSalirMouseClicked
 
-        int respuesta = JOptionPane.showConfirmDialog(this, "Esta seguro ?", "Confirmar Salir", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if( respuesta == JOptionPane.YES_OPTION ) {
+        int respuesta=JOptionPane.showConfirmDialog(this, "Esta seguro ?", "Confirmar Salir", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if( respuesta==JOptionPane.YES_OPTION ) {
             dispose();
             System.exit(0);
         }
@@ -134,10 +141,10 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA AGREGAR CLIENTES
     private void jAgregarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarClientesActionPerformed
 
-        AgregarClientes agregarClientes = new AgregarClientes();
+        AgregarClientes agregarClientes=new AgregarClientes();
         jDesktopPane1.add(agregarClientes);
-        int x = (jDesktopPane1.getWidth() - agregarClientes.getWidth()) / 2;
-        int y = (jDesktopPane1.getHeight() - agregarClientes.getHeight()) / 2;
+        int x=(jDesktopPane1.getWidth()-agregarClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-agregarClientes.getHeight())/2;
         agregarClientes.setLocation(x, y);
         agregarClientes.setVisible(true);
 
@@ -147,10 +154,10 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BUSCAR CLIENTES
     private void jBuscarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesActionPerformed
 
-        BorrarClientes borrarClientes = new BorrarClientes();
+        BorrarClientes borrarClientes=new BorrarClientes();
         jDesktopPane1.add(borrarClientes);
-        int x = (jDesktopPane1.getWidth() - borrarClientes.getWidth()) / 2;
-        int y = (jDesktopPane1.getHeight() - borrarClientes.getHeight()) / 2;
+        int x=(jDesktopPane1.getWidth()-borrarClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-borrarClientes.getHeight())/2;
         borrarClientes.setLocation(x, y);
         borrarClientes.setVisible(true);
 
@@ -160,10 +167,10 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BORRAR CLIENTES
     private void jBorrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBorrarClientesActionPerformed
 
-        BuscarClientes buscaClientes = new BuscarClientes();
+        BuscarClientes buscaClientes=new BuscarClientes();
         jDesktopPane1.add(buscaClientes);
-        int x = (jDesktopPane1.getWidth() - buscaClientes.getWidth()) / 2;
-        int y = (jDesktopPane1.getHeight() - buscaClientes.getHeight()) / 2;
+        int x=(jDesktopPane1.getWidth()-buscaClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-buscaClientes.getHeight())/2;
         buscaClientes.setLocation(x, y);
         buscaClientes.setVisible(true);
 
@@ -173,10 +180,10 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BUSCAR CLIENTES CIUDAD
     private void jBuscarClientesCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesCiudadActionPerformed
 
-        BuscarClientesApellido buscaAClientes = new BuscarClientesApellido();
+        BuscarClientesApellido buscaAClientes=new BuscarClientesApellido();
         jDesktopPane1.add(buscaAClientes);
-        int x = (jDesktopPane1.getWidth() - buscaAClientes.getWidth()) / 2;
-        int y = (jDesktopPane1.getHeight() - buscaAClientes.getHeight()) / 2;
+        int x=(jDesktopPane1.getWidth()-buscaAClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-buscaAClientes.getHeight())/2;
         buscaAClientes.setLocation(x, y);
         buscaAClientes.setVisible(true);
 
@@ -186,10 +193,10 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BUSCAR CLIENTES APELLIDO
     private void jBuscarClientesApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesApellidoActionPerformed
 
-        BuscarClientesCiudad buscaCClientes = new BuscarClientesCiudad();
+        BuscarClientesCiudad buscaCClientes=new BuscarClientesCiudad();
         jDesktopPane1.add(buscaCClientes);
-        int x = (jDesktopPane1.getWidth() - buscaCClientes.getWidth()) / 2;
-        int y = (jDesktopPane1.getHeight() - buscaCClientes.getHeight()) / 2;
+        int x=(jDesktopPane1.getWidth()-buscaCClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-buscaCClientes.getHeight())/2;
         buscaCClientes.setLocation(x, y);
         buscaCClientes.setVisible(true);
 
@@ -221,10 +228,11 @@ public class Principal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
-                DirectorioTelefonico directorio = new DirectorioTelefonico();
-                Contacto contacto1 = new Contacto(46617010L, "Esteban", "Redon", "San Luis", "Barrio jardin San Luis", 2664552752L);
-                directorio.agregarContacto(contacto1);
-                directorio.buscarContacto(2664552752L);
+                // Agregar contacto de prueba
+                // DirectorioTelefonico directorio = new DirectorioTelefonico();
+                Contacto contacto2=new Contacto(46617010, "Esteban", "Redon", "San Luis", "Barrio jardin San Luis",
+                  2664552752L);
+                contactos.agregarContacto(contacto2);
             }
         });
     }
