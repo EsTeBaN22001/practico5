@@ -4,6 +4,7 @@ import Controllers.Ciudad;
 import Controllers.Contacto;
 import Controllers.DirectorioCiudades;
 import Controllers.DirectorioTelefonico;
+import Views.Ciudades.AgregarCiudad;
 import Views.Clientes.AgregarClientes;
 import Views.Clientes.BorrarClientes;
 import Views.Clientes.BuscarClientes;
@@ -36,6 +37,7 @@ public class Principal extends javax.swing.JFrame {
         jBuscarClientesCiudad = new javax.swing.JMenuItem();
         jBuscarClientesApellido = new javax.swing.JMenuItem();
         jMenuCiudades = new javax.swing.JMenu();
+        jAgregarCiudad = new javax.swing.JMenuItem();
         jSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,6 +102,15 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar.add(jMenuDirectorio);
 
         jMenuCiudades.setText("Ciudades");
+
+        jAgregarCiudad.setText("Agregar Ciudad");
+        jAgregarCiudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAgregarCiudadActionPerformed(evt);
+            }
+        });
+        jMenuCiudades.add(jAgregarCiudad);
+
         jMenuBar.add(jMenuCiudades);
 
         jSalir.setText("Salir");
@@ -201,6 +212,15 @@ public class Principal extends javax.swing.JFrame {
         buscaCClientes.setVisible(true);
 
     }//GEN-LAST:event_jBuscarClientesApellidoActionPerformed
+
+    private void jAgregarCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarCiudadActionPerformed
+        AgregarCiudad agregarCiudad=new AgregarCiudad();
+        jDesktopPane1.add(agregarCiudad);
+        int x=(jDesktopPane1.getWidth()-agregarCiudad.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-agregarCiudad.getHeight())/2;
+        agregarCiudad.setLocation(x, y);
+        agregarCiudad.setVisible(true);
+    }//GEN-LAST:event_jAgregarCiudadActionPerformed
     // VENTANA BUSCAR CLIENTES APELLIDO
 
     public static void main(String args[]) {
@@ -238,6 +258,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem jAgregarCiudad;
     private javax.swing.JMenuItem jAgregarClientes;
     private javax.swing.JMenuItem jBorrarClientes;
     private javax.swing.JMenuItem jBuscarClientes;
