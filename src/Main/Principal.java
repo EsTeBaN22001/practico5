@@ -154,12 +154,12 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BUSCAR CLIENTES
     private void jBuscarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarClientesActionPerformed
 
-        BorrarClientes borrarClientes=new BorrarClientes();
-        jDesktopPane1.add(borrarClientes);
-        int x=(jDesktopPane1.getWidth()-borrarClientes.getWidth())/2;
-        int y=(jDesktopPane1.getHeight()-borrarClientes.getHeight())/2;
-        borrarClientes.setLocation(x, y);
-        borrarClientes.setVisible(true);
+        BuscarClientes buscarClientes=new BuscarClientes();
+        jDesktopPane1.add(buscarClientes);
+        int x=(jDesktopPane1.getWidth()-buscarClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-buscarClientes.getHeight())/2;
+        buscarClientes.setLocation(x, y);
+        buscarClientes.setVisible(true);
 
     }//GEN-LAST:event_jBuscarClientesActionPerformed
     // VENTANA BUSCAR CLIENTES
@@ -167,12 +167,12 @@ public class Principal extends javax.swing.JFrame {
     // VENTANA BORRAR CLIENTES
     private void jBorrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBorrarClientesActionPerformed
 
-        BuscarClientes buscaClientes=new BuscarClientes();
-        jDesktopPane1.add(buscaClientes);
-        int x=(jDesktopPane1.getWidth()-buscaClientes.getWidth())/2;
-        int y=(jDesktopPane1.getHeight()-buscaClientes.getHeight())/2;
-        buscaClientes.setLocation(x, y);
-        buscaClientes.setVisible(true);
+        BorrarClientes borrarClientes=new BorrarClientes();
+        jDesktopPane1.add(borrarClientes);
+        int x=(jDesktopPane1.getWidth()-borrarClientes.getWidth())/2;
+        int y=(jDesktopPane1.getHeight()-borrarClientes.getHeight())/2;
+        borrarClientes.setLocation(x, y);
+        borrarClientes.setVisible(true);
 
     }//GEN-LAST:event_jBorrarClientesActionPerformed
     // VENTANA BORRAR CLIENTES

@@ -159,6 +159,8 @@ public class AgregarClientes extends javax.swing.JInternalFrame {
                 .addGap(15, 15, 15))
         );
 
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel7.setText("Telefono");
 
@@ -238,7 +240,7 @@ public class AgregarClientes extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBotonGuardar)
                     .addComponent(jBotonSalir))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -332,10 +334,17 @@ public class AgregarClientes extends javax.swing.JInternalFrame {
 
         Principal.contactos.agregarContacto(new Contacto(dniINT, nombre, apellido, ciudad, direccion, telefonoLong));
 
-        for( Contacto contacto : Principal.contactos.getDirectorio().values() ) {
-            System.out.println("Nombre: "+contacto.getNombre()
-              +" | Teléfono: "+contacto.getCiudad());
-        }
+        JOptionPane.showMessageDialog(null, "Contacto registrado: \n"+"\n"+ "DNI: "+ dniINT + "\n"+ "Nombre: "+ nombre + "\n"+"Apellido: "+ apellido + "\n"+"Ciudad: " +ciudad + "\n"+ "Direccion: "+ direccion+"\n"+ "Telefono: "+ telefono+ "\n"+"\n"+ "Añadido Exitosamente");
+        // AGREGAR ALUMNO //
+        
+        // LIMPIAR TEXTO //s
+        jTextDNI.setText("");
+        jTextNombre.setText("");
+        jTextApellido.setText("");
+        cargarCombo();
+        jTextDomicilio.setText("");
+        jTextTelefono.setText("");
+        // LIMPIAR TEXTO //
 
     }//GEN-LAST:event_jBotonGuardarActionPerformed
     // BOTON GUARDAR //

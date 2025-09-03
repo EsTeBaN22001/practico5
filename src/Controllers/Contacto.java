@@ -66,3 +66,9 @@ public class Contacto {
         this.telefono=telefono;
     }
 }
+/*
+             /\_/\           ___
+            = o_o =_______    \ \
+             __^      __(  \.__) )
+         (@)<_____>__(_____)____/
+     */
