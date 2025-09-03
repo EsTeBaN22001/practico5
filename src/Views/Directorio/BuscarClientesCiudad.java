@@ -9,7 +9,7 @@ public class BuscarClientesCiudad extends javax.swing.JInternalFrame {
     
     public BuscarClientesCiudad() {
         initComponents();
-        this.setSize(500, 500);
+        this.setSize(650, 465);
         
         
         

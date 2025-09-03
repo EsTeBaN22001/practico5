@@ -9,7 +9,7 @@ public class BuscarClientesApellido extends javax.swing.JInternalFrame {
     
     public BuscarClientesApellido() {
         initComponents();
-        this.setSize(500, 500);
+        this.setSize(650, 465);
         
         
         
