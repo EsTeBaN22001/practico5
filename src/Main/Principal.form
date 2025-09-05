@@ -42,7 +42,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jBuscarClientesCiudad">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Buscar Clientes por Ciudad"/>
+                <Property name="text" type="java.lang.String" value="Buscar Clientes por Apellido"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBuscarClientesCiudadActionPerformed"/>
@@ -50,7 +50,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jBuscarClientesApellido">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Buscar Clientes por Apellido"/>
+                <Property name="text" type="java.lang.String" value="Buscar Clientes por Ciudad"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBuscarClientesApellidoActionPerformed"/>

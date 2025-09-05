@@ -83,7 +83,7 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuDirectorio.setText("Directorio");
 
-        jBuscarClientesCiudad.setText("Buscar Clientes por Ciudad");
+        jBuscarClientesCiudad.setText("Buscar Clientes por Apellido");
         jBuscarClientesCiudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBuscarClientesCiudadActionPerformed(evt);
@@ -91,7 +91,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenuDirectorio.add(jBuscarClientesCiudad);
 
-        jBuscarClientesApellido.setText("Buscar Clientes por Apellido");
+        jBuscarClientesApellido.setText("Buscar Clientes por Ciudad");
         jBuscarClientesApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBuscarClientesApellidoActionPerformed(evt);
