@@ -264,6 +264,16 @@ public class Principal extends javax.swing.JFrame {
                 Contacto contacto2=new Contacto(46617010, "Esteban", "Redon", "San Luis", "Barrio jardin San Luis",
                   2664552752L);
                 contactos.agregarContacto(contacto2);
+                Contacto c1 = new Contacto(20904283,"Juan", "Fernandez", "Cordoba", "Alberdi",2644158282l);       
+                Contacto c2 = new Contacto(20904283,"Mateo", "Fernandez", "Buenos Aires", "Pilar",261738282l);
+                Contacto c3 = new Contacto(20904283,"Ticiana", "Aguilar", "Buenos Aires", "Palermo",36737735l);            
+                Contacto c4 = new Contacto(20904283,"Florencia", "Torres", "San Luis", "Juana Koslay",364677l);              
+                Contacto c5 = new Contacto(20904283,"Pedro", "Quiroga", "Cordoba", "Tablada",261738282l);
+                contactos.agregarContacto(c1);
+                contactos.agregarContacto(c2);
+                contactos.agregarContacto(c3);
+                contactos.agregarContacto(c4);
+                contactos.agregarContacto(c5);
             }
         });
     }
