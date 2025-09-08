@@ -1,7 +1,6 @@
 package Views.Ciudades;
 
 import Controllers.Ciudad;
-import Controllers.DirectorioCiudades;
 import javax.swing.JOptionPane;
 
 public class AgregarCiudad extends javax.swing.JInternalFrame {

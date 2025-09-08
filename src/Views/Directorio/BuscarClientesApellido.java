@@ -116,10 +116,10 @@ public class BuscarClientesApellido extends javax.swing.JInternalFrame {
                         .addGap(46, 46, 46)
                         .addComponent(btnBuscar)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(199, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(243, 243, 243))
         );
@@ -140,8 +140,8 @@ public class BuscarClientesApellido extends javax.swing.JInternalFrame {
                         .addComponent(btnBuscar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
@@ -160,7 +160,6 @@ public class BuscarClientesApellido extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
    private void buscarYMostrar(String apellidoBuscado) {
-    // Limpiar tabla antes de mostrar nuevos resultados
     modelo.setRowCount(0);
 
     if (apellidoBuscado == null || apellidoBuscado.trim().isEmpty()) {
@@ -170,7 +169,6 @@ public class BuscarClientesApellido extends javax.swing.JInternalFrame {
 
     boolean encontrado = false;
 
-    // Recorrer todos los contactos
     for (Contacto c : Principal.contactos.getDirectorio().values()) {
         if (c.getApellido().equalsIgnoreCase(apellidoBuscado)) {
             Object[] fila = {
